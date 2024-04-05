@@ -7,59 +7,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>Shopping Cart</title>
 </head>
 <body>
-    <div class="cart shadow-sm bg-white rounded">
-        <div class="header">
-            <h3>Shopping Cart</h3>
-            <h>3 Items</h4>
-        </div>
-        <hr>
-        <div class="body">
-        <div class="cart-items">
-            <div class="img-box">
-                <img src="images/coffee.jpg" height="120px">
+    <div class="cart">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="header">
+                        <h3>Shopping Cart</h3>
+                        <h5>3 Items</h5>
+                    </div>
+                    <hr>
+                    <div class="body">
+                        <div class="product-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="product-description">
+                                        <div class="product-image">
+                                            <img src="images/coffee.jpg" alt="coffee" class="rounded" width="145%">
+                                        </div>                                        
+                                        <div class="product-details">
+                                            <h6>Black Coffee</h6>
+                                            <p>A Black Coffee Cup<br>65 ml</p>
+                                        </div>                          
+                                    </div>           
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-price">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-quantity">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <h6>1</h6>
+                                        <i class="fa-solid fa-minus"></i>  
+                                    </div>                                     
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-total">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                            </div>           
+                        </div>
+                        <div class="product-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="product-description">
+                                        <div class="product-image">
+                                            <img src="images/coffee.jpg" alt="coffee" class="rounded" width="145%">
+                                        </div>                                        
+                                        <div class="product-details">
+                                            <h6>Black Coffee</h6>
+                                            <p>A Black Coffee Cup<br>65 ml</p>
+                                        </div>                          
+                                    </div>           
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-price">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-quantity">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <h6>1</h6>
+                                        <i class="fa-solid fa-minus"></i>  
+                                    </div>                                     
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-total">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                            </div>           
+                        </div>
+                        <div class="product-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="product-description">
+                                        <div class="product-image">
+                                            <img src="images/coffee.jpg" alt="coffee" class="rounded" width="145%">
+                                        </div>                                        
+                                        <div class="product-details">
+                                            <h6>Black Coffee</h6>
+                                            <p>A Black Coffee Cup<br>65 ml</p>
+                                        </div>                          
+                                    </div>           
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-price">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-quantity">
+                                        <i class="fa-solid fa-plus"></i>
+                                        <h6>1</h6>
+                                        <i class="fa-solid fa-minus"></i>  
+                                    </div>                                     
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="product-total">
+                                        <h6>Rs.55.00</h6>
+                                    </div>                   
+                                </div>
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 summary">
+                    <div class="header">
+                        <h4>Order Summary</h4>
+                    </div>
+                    <hr>
+                    <div class="body"></div>
+                </div>
             </div>
-            <div class="about">
-                <h1 class="title">Coffee</h1>
-                <h3 class="subtitle">65 ml</h3>
-                <h3 class="subtitle">A Black Coffee Cup</h3>
-            </div>
-            <div class="counter">
-                <div class="btn">-</div>
-                <div class="count">2</div>
-                <div class="btn">+</div>
-            </div>
-            <div class="price">
-                <div class="amount">Rs. 150</div>
-                <div class="save"><u>Save For Later</u></div>
-                <div class="remove"><u>Remove</u></div>
-            </div>
-        </div>
-
-        <div class="cart-items">
-            <div class="img-box">
-                <img src="images/milk.jpg" height="120px">
-            </div>
-            <div class="about">
-                <h1 class="title">Milk</h1>
-                <h3 class="subtitle">65 ml</h3>
-                <h3 class="subtitle">A pure Milk Cup</h3>
-            </div>
-            <div class="counter">
-                <div class="btn">-</div>
-                <div class="count">2</div>
-                <div class="btn">+</div>
-            </div>
-            <div class="price">
-                <div class="amount">Rs. 200</div>
-                <div class="save"><u>Save For Later</u></div>
-                <div class="remove"><u>Remove</u></div>
-            </div>
-        </div>
-        </div>
-    </div>
+        </div>    
+    </div> 
 </body> 
 </html>
