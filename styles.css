@@ -19,7 +19,7 @@ body {
 .header {
     display: flex;
     padding-left: 30px;
-    padding-right: 50px;
+    padding-right: 30px;
     padding-top: 20px;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,49 @@ body {
     justify-content: space-between;
 }
 
+.buttons {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    background-color: lightgrey;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .product-total {
     width: 80px;
     height: 80px;
+}
+
+.order-card {
+    padding: 20px;
+}
+
+.order-subtotal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.order-delivery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.order-total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.checkout {
+    width: 100%;
+    align-content: flex-end;
 }

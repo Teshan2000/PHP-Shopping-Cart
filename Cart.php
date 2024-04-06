@@ -36,19 +36,23 @@
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-price">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 35.00</h6>
                                     </div>                   
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <h6>1</h6>
-                                        <i class="fa-solid fa-minus"></i>  
-                                    </div>                                     
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <h6>1</h6> 
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>                                             
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 35.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -58,29 +62,33 @@
                                 <div class="col-lg-6">
                                     <div class="product-description">
                                         <div class="product-image">
-                                            <img src="images/coffee.jpg" alt="coffee" class="rounded" width="145%">
+                                            <img src="images/tea.jpg" alt="tea" class="rounded" width="145%">
                                         </div>                                        
                                         <div class="product-details">
-                                            <h6>Black Coffee</h6>
-                                            <p>A Black Coffee Cup<br>65 ml</p>
+                                            <h6>Brown Tea</h6>
+                                            <p>A Brown Tea Cup<br>65 ml</p>
                                         </div>                          
                                     </div>           
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-price">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 25.00</h6>
                                     </div>                   
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <h6>1</h6>
-                                        <i class="fa-solid fa-minus"></i>  
-                                    </div>                                     
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <h6>1</h6> 
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+                                    </div>                                             
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 25.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -90,29 +98,33 @@
                                 <div class="col-lg-6">
                                     <div class="product-description">
                                         <div class="product-image">
-                                            <img src="images/coffee.jpg" alt="coffee" class="rounded" width="145%">
+                                            <img src="images/milk.jpg" alt="milk" class="rounded" width="145%">
                                         </div>                                        
                                         <div class="product-details">
-                                            <h6>Black Coffee</h6>
-                                            <p>A Black Coffee Cup<br>65 ml</p>
+                                            <h6>White Milk</h6>
+                                            <p>A White Milk Cup<br>65 ml</p>
                                         </div>                          
                                     </div>           
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-price">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 45.00</h6>
                                     </div>                   
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
-                                        <i class="fa-solid fa-plus"></i>
-                                        <h6>1</h6>
-                                        <i class="fa-solid fa-minus"></i>  
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+                                        <h6>1</h6> 
+                                        <div class="buttons">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
                                     </div>                                     
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6>Rs.55.00</h6>
+                                        <h6>Rs. 45.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -121,10 +133,26 @@
                 </div>
                 <div class="col-lg-4 summary">
                     <div class="header">
-                        <h4>Order Summary</h4>
+                        <h4 class="pt-1 mx-auto">Order Summary</h4>
                     </div>
                     <hr>
-                    <div class="body"></div>
+                    <div class="body">
+                        <div class="order-card">
+                            <div class="order-subtotal">
+                                <h6>Sub Total</h6>
+                                <h6>Rs. 152.00</h6>                           
+                            </div>
+                            <div class="order-delivery">
+                                <h6>Shipping / Delivery</h6>
+                                <h6>Rs. 152.00</h6>                           
+                            </div>
+                            <div class="order-total">
+                                <h6>Total Price</h6>
+                                <h6>Rs. 152.00</h6>                           
+                            </div>
+                            <button type="button" class="btn btn-secondary checkout">Checkout</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>    
