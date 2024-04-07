@@ -6,6 +6,8 @@ var coffeeQuantity = 1;
 var teaQuantity = 1;
 var milkQuantity = 1;
 
+var deliveryPrice = 50.00;
+
 function updateCoffeeQuantityAndTotal(action) {
     if(action === 'add') {
         coffeeQuantity++;
@@ -14,6 +16,8 @@ function updateCoffeeQuantityAndTotal(action) {
         coffeeQuantity--;
     }
     updateTotal('coffee');
+    updateSubTotal();
+    updateFinalTotal();
 }
 
 function updateTeaQuantityAndTotal(action) {
@@ -24,6 +28,8 @@ function updateTeaQuantityAndTotal(action) {
         teaQuantity--;
     }
     updateTotal('tea');
+    updateSubTotal();
+    updateFinalTotal();
 }
 
 function updateMilkQuantityAndTotal(action) {
@@ -34,6 +40,8 @@ function updateMilkQuantityAndTotal(action) {
         milkQuantity--;
     }
     updateTotal('milk');
+    updateSubTotal();
+    updateFinalTotal();
 }
 
 function updateTotal(product) {
@@ -55,4 +63,15 @@ function updateTotal(product) {
 
     document.getElementById(product + '-amount').innerHTML = quantity;
     document.getElementById(product + '-total').innerHTML = "Rs. " + total.toFixed(2);
+}
+
+function updateSubTotal() {
+    var subtotal = coffeePrice * coffeeQuantity + teaPrice * teaQuantity + milkPrice * milkQuantity;
+    document.getElementById('subtotal').innerHTML = "Rs. " + subtotal.toFixed(2);
+}
+
+function updateFinalTotal() {
+    var subtotal = coffeePrice * coffeeQuantity + teaPrice * teaQuantity + milkPrice * milkQuantity;
+    var finaltotal = subtotal + deliveryPrice;
+    document.getElementById('finaltotal').innerHTML = "Rs. " + finaltotal.toFixed(2);
 }

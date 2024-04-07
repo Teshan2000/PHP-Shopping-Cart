@@ -22,6 +22,22 @@
                     </div>
                     <hr>
                     <div class="body">
+                        <div class="product-title">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p class="title">Product Details</p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="title">Price</p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="title">Quantity</p>
+                                </div>
+                                <div class="col-lg-2">
+                                    <p class="title">Total</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="product-card">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -141,15 +157,15 @@
                         <div class="order-card">
                             <div class="order-subtotal">
                                 <h6>Sub Total</h6>
-                                <h6 id="subtotal">Rs. 152.00</h6>                           
+                                <h6 id="subtotal">Rs. 115.00</h6>                           
                             </div>
                             <div class="order-delivery">
                                 <h6>Shipping / Delivery</h6>
-                                <h6 id="extra">Rs. 50.00</h6>                           
+                                <h6 id="deliveryPrice">Rs. 50.00</h6>                           
                             </div>
                             <div class="order-total">
                                 <h6>Total Price</h6>
-                                <h6 id="totalprice">Rs. 202.00</h6>                           
+                                <h6 id="finaltotal">Rs. 165.00</h6>                           
                             </div>                            
                             <button type="button" class="btn btn-secondary checkout" onclick="myFunction()">Checkout</button>
                         </div>

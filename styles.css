@@ -29,6 +29,10 @@ body {
     background-color:lightgrey;
 }
 
+.title {
+    font-size: 14px;
+}
+
 .product-card {
     padding-top: 20px;
 }
@@ -86,6 +90,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
+    padding-top: 38px;
+    padding-bottom: 50px;
 }
 
 .order-delivery {
@@ -93,6 +99,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    padding-bottom: 50px;
 }
 
 .order-total {
@@ -100,9 +107,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-end;
+    padding-bottom: 50px;
 }
 
 .checkout {
     width: 100%;
     align-content: flex-end;
+    padding: 50px;
 }
