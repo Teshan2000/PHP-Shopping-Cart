@@ -43,17 +43,17 @@
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
                                         <div class="buttons">
-                                            <i class="fa-solid fa-minus" onclick="minusFunction()"></i>
+                                            <i class="fa-solid fa-minus" onclick="updateCoffeeQuantityAndTotal('remove')"></i>
                                         </div>
-                                        <h6 id="amount">1</h6> 
+                                        <h6 id="coffee-amount">1</h6> 
                                         <div class="buttons">
-                                            <i class="fa-solid fa-plus" onclick="plusFunction()"></i>
+                                            <i class="fa-solid fa-plus" onclick="updateCoffeeQuantityAndTotal('add')"></i>
                                         </div>
                                     </div>                                             
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6 id="total">Rs. 35.00</h6>
+                                        <h6 id="coffee-total">Rs. 35.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -79,17 +79,17 @@
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
                                         <div class="buttons">
-                                            <i class="fa-solid fa-minus" onclick="minusFunction()"></i>
+                                            <i class="fa-solid fa-minus" onclick="updateTeaQuantityAndTotal('remove')"></i>
                                         </div>
-                                        <h6 id="amount">1</h6> 
+                                        <h6 id="tea-amount">1</h6> 
                                         <div class="buttons">
-                                            <i class="fa-solid fa-plus" onclick="plusFunction()"></i>
+                                            <i class="fa-solid fa-plus" onclick="updateTeaQuantityAndTotal('add')"></i>
                                         </div>
                                     </div>                                             
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6 id="total">Rs. 25.00</h6>
+                                        <h6 id="tea-total">Rs. 25.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -115,17 +115,17 @@
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
                                         <div class="buttons">
-                                            <i class="fa-solid fa-minus" onclick="minusFunction()"></i>
+                                            <i class="fa-solid fa-minus" onclick="updateMilkQuantityAndTotal('remove')"></i>
                                         </div>
-                                        <h6 id="amount">1</h6> 
+                                        <h6 id="milk-amount">1</h6> 
                                         <div class="buttons">
-                                            <i class="fa-solid fa-plus" onclick="plusFunction()"></i>
+                                            <i class="fa-solid fa-plus" onclick="updateMilkQuantityAndTotal('add')"></i>
                                         </div>
                                     </div>                                     
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-total">
-                                        <h6 id="total">Rs. 45.00</h6>
+                                        <h6 id="milk-total">Rs. 45.00</h6>
                                     </div>                   
                                 </div>
                             </div>           
@@ -141,15 +141,15 @@
                         <div class="order-card">
                             <div class="order-subtotal">
                                 <h6>Sub Total</h6>
-                                <h6>Rs. 152.00</h6>                           
+                                <h6 id="subtotal">Rs. 152.00</h6>                           
                             </div>
                             <div class="order-delivery">
                                 <h6>Shipping / Delivery</h6>
-                                <h6>Rs. 152.00</h6>                           
+                                <h6 id="extra">Rs. 50.00</h6>                           
                             </div>
                             <div class="order-total">
                                 <h6>Total Price</h6>
-                                <h6>Rs. 152.00</h6>                           
+                                <h6 id="totalprice">Rs. 202.00</h6>                           
                             </div>                            
                             <button type="button" class="btn btn-secondary checkout" onclick="myFunction()">Checkout</button>
                         </div>
