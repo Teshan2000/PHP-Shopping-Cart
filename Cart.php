@@ -15,11 +15,20 @@
     <div class="cart">
         <div class="container-fluid">
             <div class="row">
+                <?php 
+                    include("Connect.php");
+
+                    // Query to fetch products from the database
+                    $query = "SELECT * FROM products";
+                    $result = mysqli_query($conn, $query);
+
+                    // Loop through fetched products and create product cards
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
                 <div class="col-lg-8">
                     <div class="header">
                         <h3>Shopping Cart</h3>
-                        <button type="button" class="btn btn-secondary items" onclick="openForm()">Add Product</button>
-                        <h5>3 Items</h5>
+                        <button type="button" class="btn btn-secondary items" onclick="openForm()">Add Product &nbsp;<i class="fa-solid fa-plus"></i></button>
                     </div>
                     <hr>
                     <div class="body">
@@ -147,8 +156,44 @@
                                 </div>
                             </div>           
                         </div>
+                        <div class="product-card">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="product-description">
+                                    <div class="product-image">
+                                        <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>" class="rounded" width="145%">
+                                    </div>                                        
+                                    <div class="product-details">
+                                        <h6><?php echo $row['name']; ?></h6>                                        
+                                    </div>                          
+                                </div>           
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="product-price">
+                                    <h6><?php echo $row['price']; ?></h6>
+                                </div>                   
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="product-quantity">
+                                    <div class="buttons">
+                                        <i class="fa-solid fa-minus" onclick="updateMilkQuantityAndTotal('remove')"></i>
+                                    </div>
+                                    <h6 id="milk-amount">1</h6> 
+                                    <div class="buttons">
+                                        <i class="fa-solid fa-plus" onclick="updateMilkQuantityAndTotal('add')"></i>
+                                    </div>
+                                </div>      
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="product-total">
+                                    <h6 id="milk-total">Rs. 45.00</h6>
+                                </div>  
+                            </div>
+                        </div>           
+                    </div>
                     </div>
                 </div>
+                <?php } ?>
                 <div class="col-lg-4 summary">
                     <div class="header">
                         <h4 class="pt-1 mx-auto">Order Summary</h4>
@@ -156,6 +201,10 @@
                     <hr>
                     <div class="body">
                         <div class="order-card">
+                            <div class="order-amount">
+                                <p class="title">Amount</p>
+                                <p class="title">3 Items</p>                           
+                            </div>
                             <div class="order-subtotal">
                                 <h6>Sub Total</h6>
                                 <h6 id="subtotal">Rs. 115.00</h6>                           

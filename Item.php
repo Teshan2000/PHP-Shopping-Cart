@@ -1,3 +1,30 @@
+<?php 
+    include("Connect.php");
+
+    if (isset($_POST['submit'])) {
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $price = $_POST['price'];
+
+        $filename = $_FILES['image']['name'];
+        $tempname = $_FILES['image']['tmp_name'];
+        $folder = "images/".$filename;
+
+        $query = "INSERT INTO products (id, name, price, image) VALUES ('$id','$name', '$price', '$filename')";
+
+        if (move_uploaded_file($tempname, $folder)) {
+            $msg = "Image uploaded successfully";
+        } else {
+            $msg = "Failed to upload image";
+        } 
+
+        mysqli_query($conn, $query);
+    }
+    // else {
+    //     echo "Insertion Failed!";
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +41,7 @@
 <body>
     <div class="container">
         <h3 class="text-center">Add New Products</h3>
-        <form action="/Cart.php" method="post" class="form-container mx-auto">
+        <form action="Item.php" method="post" enctype="multipart/form-data" class="form-container mx-auto">
             <div class="form-group pb-2">
                 <label class="form-label" for="id">Id</label>
                 <input type="text" class="form-control" id="id" name="id" />
@@ -33,7 +60,7 @@
             </div>
             <button type="submit" class="btn btn-secondary items" name="submit" style="width: 100%;">Submit</button>
         </form>
-    </div>
+    </div>    
     
 </body>
 </html>
