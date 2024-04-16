@@ -18,6 +18,7 @@
                 <div class="col-lg-8">
                     <div class="header">
                         <h3>Shopping Cart</h3>
+                        <button type="button" class="btn btn-secondary items" onclick="openForm()">Add Product</button>
                         <h5>3 Items</h5>
                     </div>
                     <hr>
@@ -171,8 +172,18 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>    
+            </div>           
+        </div>
     </div> 
+    <script>
+        function openForm() {
+            var windowFeatures = "height=500,width=1000";
+            var formWindow = window.open("Item.php", "_blank", windowFeatures);
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+      
 </body> 
 </html>
