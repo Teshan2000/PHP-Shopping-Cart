@@ -1,6 +1,6 @@
 # Shopping Cart Web Application
 
-![Website Screenshot](link_to_screenshot)
+![Website Screenshot](images/cart.png)
 
 ## Overview
 

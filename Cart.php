@@ -42,9 +42,6 @@
                                 <div class="col-lg-3">
                                     <p class="title ps-4">Total</p>
                                 </div>
-                                <!-- <div class="col-lg-1">
-                                    <p class="title">x</p>
-                                </div> -->
                             </div>
                         </div>           
                         <?php 
@@ -87,15 +84,9 @@
                                 </div>
                                 <div class="col-lg-3">
                                     <div class="product-total">
-                                        <h6 id="me-2 total-<?php echo $id; ?>">Rs. <?php echo number_format($price, 2); ?>&nbsp; &nbsp; &nbsp;<i class="fa-solid fa-trash-can removeicons"></i></h6>                                      
-                                        <!-- <h6 class="ps-3">X</h6> -->
+                                        <h6 id="me-2 total-<?php echo $id; ?>">Rs. <?php echo number_format($price, 2); ?>&nbsp; &nbsp; &nbsp;<a href="Remove.php?id=<?php echo $row['Id']; ?>"><i class="fa-solid fa-trash-can removeicons"></i></a></h6>                                      
                                     </div>  
                                 </div>
-                                <!-- <div class="col-lg-1">
-                                    <div class="product-price">
-                                        <h6>X</h6>
-                                    </div>                   
-                                </div> -->
                             </div>           
                         </div>
                         <?php 
@@ -135,12 +126,17 @@
                                 <h6>Total Price</h6>
                                 <h6 id="finaltotal">Rs. 50.00</h6>                           
                             </div>                            
-                            <button type="button" class="btn btn-secondary checkout" onclick="myFunction()">Checkout</button>
+                            <button type="button" class="btn btn-secondary checkout" onclick="checkout()">Checkout</button>
                         </div>
                     </div>
                 </div>
             </div>           
         </div>
     </div> 
+    <script>
+        function checkout() {
+            alert("Order completed successfully!");
+        }
+    </script>
 </body> 
 </html>
