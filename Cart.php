@@ -11,7 +11,7 @@
     <script src="scripts/quantity.js"></script>
     <title>Shopping Cart</title>
 </head>
-<body>
+<body onload="updateOrderSummary()">
     <div class="cart">
         <div class="container-fluid">
             <div class="row">
@@ -26,35 +26,39 @@
 
                         $query = "SELECT * FROM products";
                         $result = mysqli_query($conn, $query);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $id = $row['Id'];
-                                $name = $row['Name'];
-                                $description = $row['Description'];
-                                $price = $row['Price'];
-                                $image = $row['Image'];
                     ?>
                     <div class="body">
                         <div class="product-title">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
                                     <p class="title">Product Details</p>
                                 </div>
                                 <div class="col-lg-2">
-                                    <p class="title">Price</p>
+                                    <p class="title ps-2">Price</p>
                                 </div>
                                 <div class="col-lg-2">
                                     <p class="title">Quantity</p>
                                 </div>
-                                <div class="col-lg-2">
-                                    <p class="title">Total</p>
+                                <div class="col-lg-3">
+                                    <p class="title ps-4">Total</p>
                                 </div>
+                                <!-- <div class="col-lg-1">
+                                    <p class="title">x</p>
+                                </div> -->
                             </div>
-                        </div>                        
+                        </div>           
+                        <?php 
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $id = $row['Id'];
+                                    $name = $row['Name'];
+                                    $description = $row['Description'];
+                                    $price = $row['Price'];
+                                    $image = $row['Image'];
+                        ?>             
                         <div class="product-card">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-5">
                                     <div class="product-description">
                                         <div class="product-image">
                                             <img src="images/<?php echo $image;?>" alt="<?php echo $name;?>" class="rounded" width="145%">
@@ -66,32 +70,40 @@
                                     </div>           
                                 </div>
                                 <div class="col-lg-2">
-                                    <div class="product-price">
+                                    <div class="product-price ps-0 ms-0 px-0">
                                         <h6 id="price-<?php echo $id;?>">Rs. <?php echo number_format($price, 2);?></h6>
                                     </div>                   
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="product-quantity">
-                                        <div class="buttons">
-                                            <i class="fa-solid fa-minus" onclick="updateQuantityAndTotal('remove', <?php echo $id; ?>)"></i>
+                                        <div class="buttons bg-secondary">
+                                            <i class="fa-solid fa-minus icons" onclick="updateQuantityAndTotal('remove', <?php echo $id; ?>)"></i>
                                         </div>
                                         <h6 id="quantity-<?php echo $id; ?>">1</h6> 
-                                        <div class="buttons">
-                                            <i class="fa-solid fa-plus" onclick="updateQuantityAndTotal('add', <?php echo $id; ?>)"></i>
+                                        <div class="buttons bg-secondary">
+                                            <i class="fa-solid fa-plus icons" onclick="updateQuantityAndTotal('add', <?php echo $id; ?>)"></i>
                                         </div>
                                     </div>      
                                 </div>
-                                <div class="col-lg-2">
+                                <div class="col-lg-3">
                                     <div class="product-total">
-                                        <h6 id="total-<?php echo $id; ?>">Rs. <?php echo number_format($price, 2); ?></h6>
+                                        <h6 id="me-2 total-<?php echo $id; ?>">Rs. <?php echo number_format($price, 2); ?>&nbsp; &nbsp; &nbsp;<i class="fa-solid fa-trash-can removeicons"></i></h6>                                      
+                                        <!-- <h6 class="ps-3">X</h6> -->
                                     </div>  
                                 </div>
+                                <!-- <div class="col-lg-1">
+                                    <div class="product-price">
+                                        <h6>X</h6>
+                                    </div>                   
+                                </div> -->
                             </div>           
                         </div>
+                        <?php 
+                          }                            
+                        ?>
                     </div>
                     <?php 
-                            } 
-                        } else { 
+                      } else { 
                     ?>
                     <div class="body">
                         <div class="empty-cart px-5">

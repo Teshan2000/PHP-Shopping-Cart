@@ -10,8 +10,8 @@ body {
 
 .cart {
     background-color: #fafcff;
-    height: 500px;
-    width: 1000px;
+    height: 465px;
+    width: 1050px;
     border-radius: 15px;
     box-shadow: 0px 25px 40px #1687d933;    
 }
@@ -27,10 +27,12 @@ body {
 
 .summary {
     background-color:lightgrey;
+    height: 465px;
+    border-radius: 0px 15px 15px 0px;
 }
 
 .title {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .product-card {
@@ -40,6 +42,9 @@ body {
 .product-description {
     display: flex;
     flex-direction: row;
+    justify-content: start;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .product-image {
@@ -48,7 +53,7 @@ body {
 }
 
 .product-details {
-    padding-left: 60px;
+    padding-left: 52px;
     display: flex;
     flex-direction: column;
 }
@@ -56,6 +61,8 @@ body {
 .product-price {
     width: 80px;
     height: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .product-quantity {
@@ -68,7 +75,6 @@ body {
     width: 20px;
     height: 20px;
     font-size: 14px;
-    background-color: lightgrey;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -77,8 +83,9 @@ body {
 }
 
 .product-total {
-    width: 80px;
-    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .order-card {
@@ -144,3 +151,11 @@ body {
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }        
+
+.icons {
+    color:white;
+}
+
+.removeicons {
+    color:#6c757d;
+}
